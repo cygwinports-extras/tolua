@@ -1,0 +1,25 @@
+inherit lua
+
+DESCRIPTION="Lua C/C++ binding code generator"
+HOMEPAGE="http://www.tecgraf.puc-rio.br/~celes/tolua/"
+SRC_URI="ftp://ftp.tecgraf.puc-rio.br/pub/users/celes/${PN}/${P}.tar.gz"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake -j1 LUA=/usr LUAINC=${LUA_INCLUDEDIR}
+}
+
+src_test() {
+	cd ${B}
+	PATH="${B}/src/tests:$PATH"	cygmake -j1 tests
+}
+
+src_install() {
+	cd ${B}
+	dobin bin/*.exe
+	dolib lib/*.a
+
+	insinto /usr/include
+	doins include/tolua.h
+}

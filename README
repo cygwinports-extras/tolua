@@ -1,0 +1,57 @@
+tolua
+------------------------------------------
+tolua is a tool that greatly simplifies the integration of C/C++ code 
+with Lua. Based on a cleaned header file, tolua automatically generates 
+the binding code to access C/C++ features from Lua. Using Lua API and 
+tag method facilities, tolua maps C/C++ constants, external variables, 
+functions, classes, and methods to Lua.
+
+Runtime requirements:
+  cygwin-1.5.25-7
+  lua-5.1.3-1
+
+Build requirements:
+  binutils-20060817-1
+  cygport-0.3.8-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+
+Canonical website:
+  http://www.tecgraf.puc-rio.br/~celes/tolua/
+
+Canonical download:
+  ftp://ftp.tecgraf.puc-rio.br/pub/users/celes/tolua/
+
+-------------------------------------------
+
+Build instructions:
+  unpack tolua-5.1b-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./tolua-5.1b-X.cygport all
+
+This will create:
+  /usr/src/tolua-5.1b-X-src.tar.bz2
+  /usr/src/tolua-5.1b-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/tolua.exe
+  /usr/include/tolua.h
+  /usr/lib/libtolua.a
+  /usr/share/doc/tolua-5.1b/INSTALL
+  /usr/share/doc/tolua-5.1b/README
+
+------------------
+
+Port Notes:
+
+----- version 5.1b-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
