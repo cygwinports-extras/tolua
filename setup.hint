@@ -1,5 +1,5 @@
 category: Devel Lua
-requires: cygwin lua
+requires: lua
 sdesc: "Lua C/C++ binding code generator"
 ldesc: "tolua is a tool that greatly simplifies the integration of C/C++ 
 code with Lua. Based on a cleaned header file, tolua automatically 
